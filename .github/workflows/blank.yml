@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - uses: ventus-ag/vks-action@master
+        with: 
+          authUrl: ${{ secrets.AUTHURL }}
+          projectName: ${{ secrets.PROJECTNAME }}
+          projectDomainName: ${{ secrets.PROJECTDOMAINNAME }}
+          userName: ${{ secrets.USERNAME }}
+          userDomainName: ${{ secrets.USERDOMAINNAME }}
+          userPassword: ${{ secrets.USERPASSWORD }}
+          clusterName: ${{ secrets.CLUSTERNAME }}
