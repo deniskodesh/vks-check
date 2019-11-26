@@ -1,14 +1,13 @@
-name: CI
-
+name: Test VKS
 on: [push]
 
 jobs:
   build:
-
+    name: Create
     runs-on: ubuntu-latest
-
     steps:
-      - uses: deniskodesh/vks-action@master
+      - name: Create K8s
+        uses: ventus-ag/vks-action@master
         with: 
           authUrl: ${{ secrets.AUTHURL }}
           projectName: ${{ secrets.PROJECTNAME }}
