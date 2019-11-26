@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create K8s
-        uses: ventus-ag/vks-action@master
+        uses: deniskodesh/vks-action@master
         with: 
           authUrl: ${{ secrets.AUTHURL }}
           projectName: ${{ secrets.PROJECTNAME }}
