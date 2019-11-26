@@ -1,1 +1,2 @@
 # vks-check
+test
