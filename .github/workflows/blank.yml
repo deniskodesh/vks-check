@@ -6,5 +6,7 @@ jobs:
     name: Create
     runs-on: ubuntu-latest
     steps:
-      - name: Create K8s
+      - name: hello world
         run: echo hello world 
+      - name: hello world1
+        run: echo hello world1 
